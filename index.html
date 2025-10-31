@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RJD Govindpur | Purnima Yadav Official Website</title>
+
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <!-- SEO Meta Tags -->
+  <meta name="description"
+    content="Official RJD Govindpur website. Led by Purnima Yadav. Updates on Nawada politics, Bihar politics, and RJD activities.">
+  <meta name="keywords"
+    content="rjd-govindpur, purnima-yadav, salman-ragib, nawada-politics, bihar-politics, rjd candidate govindpur, rjd candidate nawada, rjd, tejaswi-yadav">
+  <meta name="author" content="RJD Govindpur Team">
+  <link rel="canonical" href="https://rjd-govindpur.netlify.app" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="RJD Govindpur | Official Website" />
+  <meta property="og:description"
+    content="Purnima Yadav is the RJD candidate for Govindpur. Latest updates on Nawada and Bihar politics." />
+  <meta property="og:url" content="https://rjd-govindpur.netlify.app" />
+  <meta property="og:image" content="https://rjd-govindpur.netlify.app/hero-govindpur.jpg" />
+
+  <!-- JSON-LD Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "PoliticalOrganization",
+    "name": "RJD Govindpur",
+    "description": "Official website for RJD Govindpur, Nawada. Led by Purnima Yadav.",
+    "leader": {
+      "@type": "Person",
+      "name": "Purnima Yadav"
+    },
+    "areaServed": {
+      "@type": "AdministrativeArea",
+      "name": "Govindpur, Nawada, Bihar"
+    },
+    "member": {
+      "@type": "Person",
+      "name": "Salman Ragib"
+    },
+    "url": "https://rjd-govindpur.netlify.app"
+  }
+  </script>
+
+  <!-- Inline CSS -->
+  <style>
+    :root {
+      --rjd-green: #27ae60;
+      --rjd-dark: #2c3e50;
+      --rjd-light: #ecf0f1;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: var(--rjd-light);
+      color: #414141;
+      line-height: 1.6;
+    }
+
+    /* Modern Navbar */
+    .navbar {
+      background: darkgreen;
+      color: #fff;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 10px rgba(140, 255, 140, 0.2);
+    }
+
+    .navbar .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: lightgreen;
+    }
+
+    .navbar .nav-links {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+    }
+
+    .navbar .nav-links a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    .navbar .nav-links a:hover {
+      color: var(--rjd-green);
+    }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+    }
+
+    .hamburger span {
+      width: 25px;
+      height: 3px;
+      background: #fff;
+      margin: 4px 0;
+      transition: 0.3s;
+    }
+
+    /* Hero Section */
+    .hero {
+      background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url('assets/p_banner.png') center/cover no-repeat;
+      height: 500px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: #fff;
+      position: relative;
+    }
+
+    .hero-content h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    }
+
+    .hero-content p {
+      font-size: 1.5rem;
+      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    }
+
+    .hero-btn {
+      margin-top: 2rem;
+      padding: 1rem 2rem;
+      background: var(--rjd-green);
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+
+    .hero-btn:hover {
+      background: #229954;
+    }
+
+    /* Main Content */
+    .container {
+      max-width: 1200px;
+      margin: 2rem auto;
+      padding: 0 2rem;
+    }
+
+    .section {
+      background: #fff;
+      padding: 2rem;
+      margin: 2rem 0;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .section h2 {
+      color: var(--rjd-green);
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      border-bottom: 3px solid var(--rjd-green);
+      padding-bottom: 0.5rem;
+    }
+
+    .candidate-card {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .candidate-card img {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      object-fit: fill;
+      border: 5px solid var(--rjd-green);
+    }
+
+    .content-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .card {
+      background: #fff;
+      padding: 1.5rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-bottom: 1rem;
+    }
+
+    .card h3 {
+      color: var(--rjd-green);
+      margin-bottom: 0.5rem;
+    }
+
+    /* Footer */
+    footer {
+      background: var(--rjd-dark);
+      color: #fff;
+      text-align: center;
+      padding: 2rem;
+      margin-top: 2rem;
+    }
+
+    .social-slider ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .social-slider ul li {
+      width: 50px;
+      height: 50px;
+      position: relative;
+      margin: 10px 0;
+      cursor: pointer;
+      border-radius: 3px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    }
+
+    .social-slider ul li .fa {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 20px;
+      color: #fff;
+    }
+
+    /* Platform colors */
+    .social-slider ul li.facebook {
+      background: #3b5998;
+    }
+
+    .social-slider ul li.twitter {
+      background: #00aced;
+    }
+
+    .social-slider ul li.instagram {
+      background: #bc2a8d;
+    }
+
+    .social-slider ul li.google {
+      background: #dd4b39;
+    }
+
+    .social-slider ul li.whatsapp {
+      background: #4dc247;
+    }
+
+    /* Slider background per platform */
+    .social-slider ul li.facebook .slider {
+      background: #627aac;
+    }
+
+    .social-slider ul li.twitter .slider {
+      background: #7fd5f6;
+    }
+
+    .social-slider ul li.instagram .slider {
+      background: #dd94c6;
+    }
+
+    .social-slider ul li.google .slider {
+      background: #eea59c;
+    }
+
+    .social-slider ul li.whatsapp .slider {
+      background: #82d47e;
+    }
+
+    .social-slider .slider {
+      position: absolute;
+      top: 0;
+      left: 51px;
+      width: 0;
+      height: 50px;
+      border-radius: 3px;
+      transition: all 0.5s 0.3s ease;
+    }
+
+    .social-slider .slider p {
+      font-family: Arial, sans-serif;
+      text-transform: uppercase;
+      font-size: 16px;
+      font-weight: 900;
+      color: #fff;
+      text-align: center;
+      line-height: 50px;
+      opacity: 0;
+      transition: all 0.6s ease;
+    }
+
+    /* Hover effects */
+    .social-slider ul li:hover .slider {
+      width: 180px;
+      transition: all 0.5s ease;
+    }
+
+    .social-slider ul li:hover .slider p {
+      opacity: 1;
+      transition: all 1s 0.2s ease;
+    }
+
+
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .navbar .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background: var(--rjd-dark);
+        padding: 1rem;
+      }
+
+      .navbar .nav-links.active {
+        display: flex;
+      }
+
+      .hamburger {
+        display: flex;
+      }
+
+      .hero-content h1 {
+        font-size: 2rem;
+      }
+
+      .hero-content p {
+        font-size: 1rem;
+      }
+
+      .candidate-card {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Modern Navbar -->
+  <nav class="navbar">
+    <img src="favicon.ico" alt="logo" style="height: 60px; width: 60px; border-radius:50%;">
+    <div class="logo">RJD Govindpur</div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="posts.html">Posts</a></li>
+    </ul>
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>RJD Govindpur</h1>
+      <p>Led by Purnima Yadav - Working for Nawada's Development</p>
+      <br>
+      <br>
+      <a href="#about" class="hero-btn">Learn More</a>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <div class="container">
+    <!-- Candidate Section -->
+    <section class="section" id="about">
+      <h2>Our Current Candidate</h2>
+      <div class="candidate-card">
+        <img src="assets/purnima-yadav.png" alt="Purnima Yadav" onerror="this.src='https://via.placeholder.com/200'">
+        <div>
+          <h3>Purnima Yadav</h3>
+          <p>| Govindpur – 238, Serial No (1) |
+            <br>#purnimayadav #rjdgovindpur
+            A progressive leader and the official RJD candidate from Govindpur, Purnima Yadav embodies women’s
+            empowerment, rural development, and educational reform.
+            Her vision represents the essence of Tejashwi Yadav’s mission — empowering women, uplifting youth, and
+            transforming every village into a hub of opportunity and dignity.
+            She connects deeply with women, students, and farmers, working tirelessly to ensure social justice and equal
+            growth for all.
+            “Her leadership is not about power — it’s about purpose, progress, and people.
+            <br>
+            <br>
+            🔰 Together for Bihar’s New Dawn | #RJD #Mahagathbandhan #BiharElection2025
+            Under the visionary leadership of Tejashwi Yadav, both Purnima Yadav and Kaushal Yadav are uniting the
+            people of Nawada and Govindpur with a mission of justice, dignity, and development.
+            They represent the heart of Bihar’s grassroots movement — determined to bring real change to every home and
+            every voter.
+            🔥 “From villages to voices — the Yadav duo is redefining leadership, bringing justice and development to
+            every doorstep.”
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- What We Do Section -->
+    <section class="section">
+      <h2>What We have Done</h2>
+      <div class="content-grid">
+        <div class="card">
+          <img src="assets/Sakri_River.jpg" alt="Development" onerror="this.src='https://via.placeholder.com/300x200'">
+          <h3>Roads And Connectivity</h3>
+          <p>During her 2015–2020 term as Gobindpur MLA (INC), she supported initiatives to
+            improve rural roads under state schemes like the Mukhyamantri Gram Sampark Yojana, addressing monsoon
+            flooding issues on the Sakri River that isolate villages like Delhua (3 km from Govindpur market). Local
+            reports credit with pushing for bridges and embankments to connect Govindpur block's 100+
+            villages, reducing travel time to Nawada town by 30–40% for markets and services.
+          </p>
+        </div>
+        <div class="card">
+          <img src="assets/sanitation.jpg" alt="Education" onerror="this.src='https://via.placeholder.com/300x200'">
+          <h3>Water and Sanitation</h3>
+          <p> As part of JD(U)'s governance (2010–2015), she backed the Har Ghar Jal initiative precursors, installing
+            hand pumps and community toilets in panchayats. In 2020 candidacy affidavits, she
+            highlighted social work funding ₹50–100 lakh annually for minor irrigation projects via MLA Local Area
+            Development Funds (MLALAD), benefiting 5,000+ farmers in fertile Sakri basin lands. </p>
+        </div>
+        <div class="card">
+          <img src="assets/overall.jpeg" alt="Community" onerror="this.src='https://via.placeholder.com/300x200'">
+          <h3>Overall Impact</h3>
+          <p> Her work aligns with Nawada's district priorities ( ₹289 crore in recent state projects for buildings
+            and solar infrastructure).
+            @Dev_Fadnavis
+            Critics note delays in flood-prone areas, but supporters praise her for prioritizing backward castes' access
+            to basic amenities.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Supporters Section -->
+    <section class="section">
+      <h2>Key Supporters</h2>
+      <div class="candidate-card">
+        <img src="assets/salman-ragib.jpg" alt="salman ragib" onerror="this.src='https://via.placeholder.com/200'">
+        <div>
+          <h3>Salman Ragib</h3>
+          <p>Former MLC Salman Ragib and all RJD volunteers across Nawada are tirelessly working on the ground, uniting
+            people with the shared dream of a just, progressive, and self-reliant Bihar.</p>
+        </div>
+      </div>
+
+    </section>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+
+    <div class="social-slider">
+      <ul>
+        <li class="facebook">
+          <i class="fa fa-facebook" aria-hidden="true"></i>
+          <div class="slider">
+            <a href="">
+              <p>facebook</p>
+            </a>
+          </div>
+        </li>
+
+        <li class="twitter">
+          <i class="fa fa-twitter" aria-hidden="true"></i>
+          <div class="slider">
+            <a href="">
+              <p>twitter</p>
+            </a>
+          </div>
+        </li>
+
+        <li class="instagram">
+          <i class="fa fa-instagram" aria-hidden="true"></i>
+          <div class="slider">
+            <a href="">
+              <p>instagram</p>
+            </a>
+          </div>
+        </li>
+
+        <!-- <li class="google">
+          <i class="fa fa-google" aria-hidden="true"></i>
+          <div class="slider">
+            <p>google</p>
+          </div>
+        </li>
+
+        <li class="whatsapp">
+          <i class="fa fa-whatsapp" aria-hidden="true"></i>
+          <div class="slider">
+            <p>whatsapp</p>
+          </div>
+        </li> -->
+      </ul>
+    </div>
+    <p>fanpage</p>
+    <p>© 2025 RJD Govindpur. All rights reserved.</p>
+    <p>Follow us on social media for updates</p>
+  </footer>
+
+  <!-- Mobile Menu Script -->
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('navLinks');
+    hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    });
+  </script>
+</body>
+
+</html>
